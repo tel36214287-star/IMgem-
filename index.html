@@ -2,77 +2,68 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Célula Humana Interativa - Aprimorada</title>
+    <title>Conteúdo da Pasta - GitHub Simulado</title>
     <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; text-align: center; margin: 20px; background-color: #f7f7f7; }
-        h1 { color: #007bff; border-bottom: 2px solid #007bff; padding-bottom: 10px; }
-        .map-container { 
-            margin: 20px auto; 
-            max-width: 800px; 
-            box-shadow: 0 8px 16px rgba(0,0,0,0.2); 
-            border-radius: 10px; 
-            overflow: hidden;
+        body { font-family: Arial, sans-serif; margin: 40px; background-color: #f6f8fa; color: #24292e; }
+        .file-list { 
+            border: 1px solid #e1e4e8; 
+            border-radius: 6px; 
+            overflow: hidden; 
+            width: 70%; 
+            margin: 0 auto 30px; 
+            background-color: #ffffff; 
         }
-        img { 
-            display: block; 
-            width: 100%; 
-            height: auto; 
-            cursor: pointer; /* Indica que é clicável */
+        .header, .file-item { 
+            display: flex; 
+            padding: 10px 15px; 
+            border-bottom: 1px solid #e1e4e8; 
+            align-items: center; 
         }
-        p { color: #333; font-style: italic; margin-top: 5px; }
-        .info { 
-            background-color: #e9ecef; 
-            padding: 15px; 
-            border-radius: 8px;
-            margin-top: 20px;
+        .header { 
+            font-weight: bold; 
+            background-color: #f3f4f6; 
         }
+        .name { flex: 3; }
+        .commit { flex: 2; color: #586069; font-size: 0.9em; }
+        .date { flex: 1; text-align: right; font-size: 0.9em; }
+        .image-display { margin-top: 30px; text-align: center; }
+        .image-display img { max-width: 100%; height: auto; border: 1px solid #e1e4e8; border-radius: 4px; }
+        .file-item:last-child { border-bottom: none; }
     </style>
 </head>
 <body>
-    <h1>Célula Humana Interativa 🔬 (Aprimorada)</h1>
-    <p>Clique nas organelas para acessar a página de explicação da sua função.</p>
+    <h1>📂 Conteúdo da Pasta (Simulação GitHub)</h1>
+    
+    <div class="file-list">
+        <div class="header">
+            <span class="name">Nome</span>
+            <span class="commit">Última Mensagem de Commit</span>
+            <span class="date">Data do Último Commit</span>
+        </div>
+        
+        <div class="file-item">
+            <span class="name">.keepgit</span>
+            <span class="commit">Create .keepgit</span>
+            <span class="date">5 minutes ago</span>
+        </div>
 
-    <div class="map-container">
-        <img src="http://googleusercontent.com/image_generation_content/0" 
-             alt="Diagrama de Célula Humana" 
-             usemap="#celula-mapa" 
-             width="800" 
-             height="800">
+        <div class="file-item">
+            <span class="name">
+                <a href="Gemini_Generated_Image_cqv5g7cqv5g7cqv5 (1).png" target="_blank">
+                    Gemini_Generated_Image_cqv5g7cqv5g7cqv5 (1).png
+                </a>
+            </span>
+            <span class="commit">Add files via upload</span>
+            <span class="date">1 minute ago</span>
+        </div>
     </div>
 
-    <map name="celula-mapa">
-        
-        <area shape="circle" coords="400,400,180" 
-              href="https://pt.wikipedia.org/wiki/N%C3%BAcleo_celular" 
-              alt="Núcleo - Central de Comando" target="_blank">
-
-        <area shape="circle" coords="400,400,45" 
-              href="https://pt.wikipedia.org/wiki/N%C3%BAcleo_celular#Nucl%C3%A9olo" 
-              alt="Nucléolo - Produção de Ribossomos" target="_blank">
-        
-        <area shape="rect" coords="450,200,750,400" 
-              href="https://pt.wikipedia.org/wiki/Ret%C3%ADculo_endoplasm%C3%A1tico#Ret%C3%ADculo_endoplasm%C3%A1tico_rugoso_ou_granular" 
-              alt="Retículo Endoplasmático Rugoso - Síntese Proteica" target="_blank">
-
-        <area shape="poly" coords="500,550, 650,550, 680,650, 480,750, 450,650" 
-              href="https://pt.wikipedia.org/wiki/Complexo_de_Golgi" 
-              alt="Complexo de Golgi - Empacotamento e Secreção" target="_blank">
-
-        <area shape="circle" coords="200,200,40" 
-              href="https://pt.wikipedia.org/wiki/Mitoc%C3%B4ndria" 
-              alt="Mitocôndria - Respiração Celular" target="_blank">
-        
-        <area shape="circle" coords="600,200,40" 
-              href="https://pt.wikipedia.org/wiki/Mitoc%C3%B4ndria" 
-              alt="Mitocôndria - Respiração Celular" target="_blank">
-
-        <area shape="circle" coords="700,300,20" 
-              href="https://pt.wikipedia.org/wiki/Lisossomo" 
-              alt="Lisossomo - Digestão Intracelular" target="_blank">
-    </map>
-
-    <div class="info">
-        <p>Os links externos abrem em uma nova aba (`target="_blank"`) e levam à Wikipédia ou a sites educacionais para uma explicação detalhada da função de cada organela.</p>
+    <div class="image-display">
+        <h2>🖼️ Visualização da Imagem</h2>
+        <img src="Gemini_Generated_Image_cqv5g7cqv5g7cqv5 (1).png" 
+             alt="Diagrama da Célula Humana" 
+             title="Gemini_Generated_Image_cqv5g7cqv5g7cqv5 (1).png">
+        <p>A imagem acima é carregada usando o nome do arquivo.</p>
     </div>
 </body>
 </html>
