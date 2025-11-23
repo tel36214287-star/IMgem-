@@ -2,15 +2,17 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Conteúdo da Pasta - GitHub Simulado</title>
+    <title>IMgem - Diagrama Celular Interativo</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 40px; background-color: #f6f8fa; color: #24292e; }
-        .file-list { 
-            border: 1px solid #e1e4e8; 
-            border-radius: 6px; 
-            overflow: hidden; 
-            width: 70%; 
-            margin: 0 auto 30px; 
+        body { font-family: 'Arial', sans-serif; margin: 40px; background-color: #f6f8fa; color: #24292e; }
+        
+        /* Estilos da Lista de Arquivos (Estrutura GitHub) */
+        .file-list-container {
+            width: 80%;
+            margin: 0 auto 50px;
+            border: 1px solid #e1e4e8;
+            border-radius: 6px;
+            overflow: hidden;
             background-color: #ffffff; 
         }
         .header, .file-item { 
@@ -26,15 +28,38 @@
         .name { flex: 3; }
         .commit { flex: 2; color: #586069; font-size: 0.9em; }
         .date { flex: 1; text-align: right; font-size: 0.9em; }
-        .image-display { margin-top: 30px; text-align: center; }
-        .image-display img { max-width: 100%; height: auto; border: 1px solid #e1e4e8; border-radius: 4px; }
         .file-item:last-child { border-bottom: none; }
+        .file-item a { text-decoration: none; color: #0366d6; }
+
+        /* Estilos do Implante da Imagem Interativa */
+        .image-implant {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px;
+            background-color: #ffffff;
+            border: 1px solid #e1e4e8;
+            border-radius: 6px;
+        }
+        .image-implant h2 { color: #007bff; margin-bottom: 20px; }
+        .map-container { 
+            display: inline-block; 
+            max-width: 800px; 
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2); 
+            border-radius: 10px; 
+            overflow: hidden;
+        }
+        .map-container img { 
+            display: block; 
+            width: 100%; 
+            height: auto; 
+            cursor: pointer; 
+        }
     </style>
 </head>
 <body>
-    <h1>📂 Conteúdo da Pasta (Simulação GitHub)</h1>
+    <h1>📁 Iмgem- / imagem /</h1>
     
-    <div class="file-list">
+    <div class="file-list-container">
         <div class="header">
             <span class="name">Nome</span>
             <span class="commit">Última Mensagem de Commit</span>
@@ -42,9 +67,15 @@
         </div>
         
         <div class="file-item">
+            <span class="name">..</span>
+            <span class="commit"></span>
+            <span class="date"></span>
+        </div>
+        
+        <div class="file-item">
             <span class="name">.keepgit</span>
             <span class="commit">Create .keepgit</span>
-            <span class="date">5 minutes ago</span>
+            <span class="date">6 minutes ago</span>
         </div>
 
         <div class="file-item">
@@ -54,16 +85,63 @@
                 </a>
             </span>
             <span class="commit">Add files via upload</span>
-            <span class="date">1 minute ago</span>
+            <span class="date">5 minutes ago</span>
+        </div>
+        
+        <div class="file-item">
+            <span class="name">README.md</span>
+            <span class="commit">Initial commit</span>
+            <span class="date">7 minutes ago</span>
+        </div>
+        
+        <div class="file-item">
+            <span class="name">index.html</span>
+            <span class="commit">Implemented interactive cell diagram</span>
+            <span class="date">2 minutes ago</span>
         </div>
     </div>
 
-    <div class="image-display">
-        <h2>🖼️ Visualização da Imagem</h2>
-        <img src="Gemini_Generated_Image_cqv5g7cqv5g7cqv5 (1).png" 
-             alt="Diagrama da Célula Humana" 
-             title="Gemini_Generated_Image_cqv5g7cqv5g7cqv5 (1).png">
-        <p>A imagem acima é carregada usando o nome do arquivo.</p>
+    <div class="image-implant">
+        <h2>🔬 Diagrama de Célula Humana Interativa</h2>
+        <p>Clique nas organelas para ver sua função em páginas externas (links Wikipedia).</p>
+
+        <div class="map-container">
+            <img src="Gemini_Generated_Image_cqv5g7cqv5g7cqv5 (1).png" 
+                 alt="Diagrama de Célula Humana" 
+                 usemap="#celula-mapa" 
+                 width="800" 
+                 height="800">
+        </div>
+
+        <map name="celula-mapa">
+            <area shape="circle" coords="400,400,180" 
+                  href="https://pt.wikipedia.org/wiki/N%C3%BAcleo_celular" 
+                  alt="Núcleo - Central de Comando" target="_blank">
+
+            <area shape="circle" coords="400,400,45" 
+                  href="https://pt.wikipedia.org/wiki/N%C3%BAcleo_celular#Nucl%C3%A9olo" 
+                  alt="Nucléolo - Produção de Ribossomos" target="_blank">
+            
+            <area shape="rect" coords="450,200,750,400" 
+                  href="https://pt.wikipedia.org/wiki/Ret%C3%ADculo_endoplasm%C3%A1tico#Ret%C3%ADculo_endoplasm%C3%A1tico_rugoso_ou_granular" 
+                  alt="Retículo Endoplasmático Rugoso - Síntese Proteica" target="_blank">
+
+            <area shape="poly" coords="500,550, 650,550, 680,650, 480,750, 450,650" 
+                  href="https://pt.wikipedia.org/wiki/Complexo_de_Golgi" 
+                  alt="Complexo de Golgi - Empacotamento e Secreção" target="_blank">
+
+            <area shape="circle" coords="200,200,40" 
+                  href="https://pt.wikipedia.org/wiki/Mitoc%C3%B4ndria" 
+                  alt="Mitocôndria - Respiração Celular" target="_blank">
+            
+            <area shape="circle" coords="600,200,40" 
+                  href="https://pt.wikipedia.org/wiki/Mitoc%C3%B4ndria" 
+                  alt="Mitocôndria - Respiração Celular" target="_blank">
+
+            <area shape="circle" coords="700,300,20" 
+                  href="https://pt.wikipedia.org/wiki/Lisossomo" 
+                  alt="Lisossomo - Digestão Intracelular" target="_blank">
+        </map>
     </div>
 </body>
 </html>
