@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Célula Humana Interativa - Aprimorada</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; text-align: center; margin: 20px; background-color: #f7f7f7; }
+        h1 { color: #007bff; border-bottom: 2px solid #007bff; padding-bottom: 10px; }
+        .map-container { 
+            margin: 20px auto; 
+            max-width: 800px; 
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2); 
+            border-radius: 10px; 
+            overflow: hidden;
+        }
+        img { 
+            display: block; 
+            width: 100%; 
+            height: auto; 
+            cursor: pointer; /* Indica que é clicável */
+        }
+        p { color: #333; font-style: italic; margin-top: 5px; }
+        .info { 
+            background-color: #e9ecef; 
+            padding: 15px; 
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Célula Humana Interativa 🔬 (Aprimorada)</h1>
+    <p>Clique nas organelas para acessar a página de explicação da sua função.</p>
+
+    <div class="map-container">
+        <img src="http://googleusercontent.com/image_generation_content/0" 
+             alt="Diagrama de Célula Humana" 
+             usemap="#celula-mapa" 
+             width="800" 
+             height="800">
+    </div>
+
+    <map name="celula-mapa">
+        
+        <area shape="circle" coords="400,400,180" 
+              href="https://pt.wikipedia.org/wiki/N%C3%BAcleo_celular" 
+              alt="Núcleo - Central de Comando" target="_blank">
+
+        <area shape="circle" coords="400,400,45" 
+              href="https://pt.wikipedia.org/wiki/N%C3%BAcleo_celular#Nucl%C3%A9olo" 
+              alt="Nucléolo - Produção de Ribossomos" target="_blank">
+        
+        <area shape="rect" coords="450,200,750,400" 
+              href="https://pt.wikipedia.org/wiki/Ret%C3%ADculo_endoplasm%C3%A1tico#Ret%C3%ADculo_endoplasm%C3%A1tico_rugoso_ou_granular" 
+              alt="Retículo Endoplasmático Rugoso - Síntese Proteica" target="_blank">
+
+        <area shape="poly" coords="500,550, 650,550, 680,650, 480,750, 450,650" 
+              href="https://pt.wikipedia.org/wiki/Complexo_de_Golgi" 
+              alt="Complexo de Golgi - Empacotamento e Secreção" target="_blank">
+
+        <area shape="circle" coords="200,200,40" 
+              href="https://pt.wikipedia.org/wiki/Mitoc%C3%B4ndria" 
+              alt="Mitocôndria - Respiração Celular" target="_blank">
+        
+        <area shape="circle" coords="600,200,40" 
+              href="https://pt.wikipedia.org/wiki/Mitoc%C3%B4ndria" 
+              alt="Mitocôndria - Respiração Celular" target="_blank">
+
+        <area shape="circle" coords="700,300,20" 
+              href="https://pt.wikipedia.org/wiki/Lisossomo" 
+              alt="Lisossomo - Digestão Intracelular" target="_blank">
+    </map>
+
+    <div class="info">
+        <p>Os links externos abrem em uma nova aba (`target="_blank"`) e levam à Wikipédia ou a sites educacionais para uma explicação detalhada da função de cada organela.</p>
+    </div>
+</body>
+</html>
